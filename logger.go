@@ -103,7 +103,7 @@ func NewFileLoggerWithLevel(path, level string) *zap.Logger {
 }
 
 func NewFileLoggerWithFields(path string, fieldKvs ...string) *zap.Logger {
-	return newFileLogger(path, defaultLevel)
+	return NewFileLoggerWithLevelFields(path, defaultLevel, fieldKvs...)
 }
 
 func NewFileLoggerWithLevelFields(path, level string, fieldKvs ...string) *zap.Logger {
